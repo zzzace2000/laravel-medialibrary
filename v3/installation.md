@@ -6,39 +6,39 @@ layout: default
 
 You can install this package via composer using this command:
 
-```bash
+{% highlight bash %}
 composer require spatie/laravel-medialibrary
-```
+{% endhighlight %}
 
 Next, you must install the service provider:
 
-```php
+{% highlight php %}
 // config/app.php
 'providers' => [
     ...
     Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
 ];
-```
+{% endhighlight %}
 
 You can publish the migration with:
-```bash
+{% highlight bash %}
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
-```
+{% endhighlight %}
 
 After the migration has been published you can create the media-table by running the migrations:
 
-```bash
+{% highlight bash %}
 php artisan migrate
-```
+{% endhighlight %}
 
 You can publish the config-file with:
-```bash
+{% highlight bash %}
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"
-```
+{% endhighlight %}
 
 This is the contents of the published config file:
 
-```php
+{% highlight php %}
 return [
 
     /*
@@ -66,11 +66,11 @@ return [
         'domain' => 'https://xxxxxxx.s3.amazonaws.com',
     ],
 ];
-```
+{% endhighlight %}
 
 And finally you should add a disk to `app/config/filesystems.php`. This would be a typical configuration:
 
-```php
+{% highlight php %}
     ...
 	'disks' => [
         'media' => [
@@ -78,7 +78,7 @@ And finally you should add a disk to `app/config/filesystems.php`. This would be
             'root'   => public_path().'/media',
         ],
     ...    
-```
+{% endhighlight %}
 
 All files of the medialibrary will be stored on that disk. If you are planning on
 working with the image manipulations you should configure a queue on your service 
