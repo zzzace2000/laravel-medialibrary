@@ -1,5 +1,6 @@
 ---
 title: Introduction
+permalink: /
 layout: default
 ---
 #Introduction
