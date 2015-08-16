@@ -18,3 +18,6 @@
         Adding custom properties: '/v3/advanced-usage/adding-custom-properties/'
         Generating custom urls: '/v3/advanced-usage/generating-custom-urls/'
         Storing media specifc manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
+    API:
+        Adding files: '/v3/api/adding-files/'
+        Defining converions: '/v3/api/defining-converions/'
