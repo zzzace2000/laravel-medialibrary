@@ -1,14 +1,14 @@
-'v3':
+v3:
     Getting started:
         Introduction: '/'
         Requirements: '/v3/requirements/'
         Installation: '/v3/installation/'
         Simple example: '/v3/simple-example/'
     Basic usage:
-        Preparing your model : '/v3/basic-usage/preparing-your-model/'
-        Associating files : '/v3/basic-usage/associating-files/'
-        Retrieving media : '/v3/basic-usage/retrieving-media/'
-        Working with collections : '/v3/basic-usage/working-with-collections/'
+        Preparing your model: '/v3/basic-usage/preparing-your-model/'
+        Associating files: '/v3/basic-usage/associating-files/'
+        Retrieving media: '/v3/basic-usage/retrieving-media/'
+        Working with collections: '/v3/basic-usage/working-with-collections/'
     Converting images:
         Defining conversions: '/v3/converting-images/defining-conversions/'
         Retrieving converted images: '/v3/converting-images/retrieving-converted-images/'
@@ -16,8 +16,8 @@
     Advanced usage:
         Working with multiple filesystems: '/v3/advanced-usage/working-with-multiple-filesystems/'
         Adding custom properties: '/v3/advanced-usage/adding-custom-properties/'
-        Generating custom urls: '/v3/advanced-usage/generating-custom-urls/'
-        Storing media specifc manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
+        Generating custom URLs: '/v3/advanced-usage/generating-custom-urls/'
+        Storing media specific manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
     API:
         Adding files: '/v3/api/adding-files/'
-        Defining converions: '/v3/api/defining-converions/'
+        Defining conversions: '/v3/api/defining-converions/'

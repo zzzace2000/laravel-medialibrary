@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $fs;
+  line-height: $lh;
+  @include gotham-narrow-light;
+}
