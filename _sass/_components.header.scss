@@ -1,12 +1,13 @@
 .header {
   color: $white;
   background-color: $blue;
-  display: flex;
+  @include clearfix;
 
   .brand {
     padding: 10px 9px;
     background-color: $blue-dark;
-    flex: 0 0 340px;
+    width: 340px;
+    float: left;
 
     .logotype a {
       display: block;
@@ -17,6 +18,8 @@
   }
 
   .project {
+    float: left;
+    width: calc(100% - 340px);
     padding: 0 30px;
 
     h2,
