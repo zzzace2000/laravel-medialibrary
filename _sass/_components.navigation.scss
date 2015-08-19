@@ -1,4 +1,4 @@
-.sidebar {
+.navigation {
   line-height: 1.4;
   padding: 33px 30px 25px;
   background-color: $blue-light;
@@ -31,4 +31,8 @@
     }
   }
   
+}
+
+.navigation-mobile {
+  display: none;
 }

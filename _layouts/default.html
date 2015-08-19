@@ -36,14 +36,6 @@
         <section class="brand">
             <h1 class="logotype"><a href="https://spatie.be">Spatie</a></h1>
         </section>
-        <!-- <a class="logo" href="{% if version == site.data.project.default_version %}/{% else %}/{{ version }}/{% endif %}"> -->
-            <!--
-            {% if site.data.images.logo %}
-                <span class="icon">
-                    <img src="{{ site.data.images.logo }}" alt="{{ site.data.project.title }} - {{ site.data.project.tagline }}">
-                </span>
-            {% endif %}
-            -->
             <section class="project">
                 <h2><a href="/">{{ site.data.project.title }}</a></h2>
                 <h3>{{ site.data.project.tagline }}</h3>
@@ -51,22 +43,39 @@
         </a>
     </header>
 
-    <!-- <select class="versions">
+    {% comment %}
+    <select class="versions">
         {% for v in site.data.menu %}
         <option data-url="{% if v[0] == site.data.project.default_version %}/{% else %}/{{ v[0] }}/{% endif %}" {% if version == v[0] %}selected="selected"{% endif %}>
             Version: {{ v[0] }}
         </option>
         {% endfor %}
-    </select> -->
+    </select>
+    {% endcomment %}
+
     <div class="content-container">
-        <nav class="sidebar">
+        <nav class="navigation-mobile">
+            <select>
+                {% for section in site.data.menu[version] %}
+                    <optgroup>
+                        <option disabled>-- {{ section[0] }}</option>
+                        {% for link in section[1] %}
+                            <option value="{{ link[1] }}" {% if page.url == link[1] %}disabled{% endif %}>
+                                {{ link[0] }}
+                            </option>
+                        {% endfor %}
+                    </optgroup>
+                {% endfor %}
+            </select>
+        </nav>
+        <nav class="navigation">
             {% for section in site.data.menu[version] %}
                 <h2>{{ section[0] }}</h2>
                 <ul>
                     {% for link in section[1] %}
-                    <li {% if page.url == link[1] %}class="selected"{% endif %}>
-                        <a href="{{ link[1] }}">{{ link[0] }}</a>
-                    </li>
+                        <li {% if page.url == link[1] %}class="selected"{% endif %}>
+                            <a href="{{ link[1] }}">{{ link[0] }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             {% endfor %}

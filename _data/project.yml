@@ -1,5 +1,5 @@
 title: Medialibrary
-tagline: A medialibrary for Laravel
-description: A medialibrary for Laravel.
+tagline: A media library for Laravel
+description: A media library for Laravel.
 google_analytics_tracking_id: UA-46050814-XX
-default_version: "v3"
+default_version: v3

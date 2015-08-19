@@ -11,9 +11,12 @@
   }
 
   p,
-  h2,
-  .highlight {
+  h2 {
     margin-top: $lh;
+  }
+
+  .highlight {
+    margin-top: 6px;
   }
 
   p code {

@@ -2,7 +2,7 @@ v3:
     Getting started:
         Introduction: '/'
         Requirements: '/v3/requirements/'
-        Installation: '/v3/installation/'
+        Installation & setup: '/v3/installation-and-setup/'
         Simple example: '/v3/simple-example/'
     Basic usage:
         Preparing your model: '/v3/basic-usage/preparing-your-model/'
@@ -20,4 +20,3 @@ v3:
         Storing media specific manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
     API:
         Adding files: '/v3/api/adding-files/'
-        Defining conversions: '/v3/api/defining-converions/'

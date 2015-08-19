@@ -2,11 +2,10 @@
 title: Adding files
 layout: default
 ---
-#Adding files
 
-##Start methods
+## Start methods
 
-###addMedia
+### addMedia
 
 ```php
 /**
@@ -19,9 +18,10 @@ layout: default
 public function addMedia($file)
 ```
 
-##Chaining
+## Chaining
 
-###preserveOriginal
+### preserveOriginal
+
 ```php
 /**
  * When adding the file the medialibrary, the original file
@@ -31,4 +31,3 @@ public function addMedia($file)
  */
 public function preservingOriginal()
 ```
-

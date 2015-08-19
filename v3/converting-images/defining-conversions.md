@@ -3,34 +3,33 @@ title: Defining conversions
 layout: default
 ---
 
-#Defining conversions
-
 Imagine you are making a site with a list of all news-items. Wouldn't it be nice to show the user a thumb of image associated with the news-item? When adding an image to a media collection, these derived images can be created automatically.
 
-If you want to use this functionality your models should implement the hasMediaConversions interface instead of hasMedia:
+If you want to use this functionality your models should implement the `hasMediaConversions` interface instead of `hasMedia`:
 
 ```php
-...
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 class News extends Model implements HasMediaConversions
 {
     use HasMediaTrait;
-   ...
 }
 ```
+
 You can let the package know that it should create a derived by registering a media conversion on the model.
 
 ```php
 //in your news model
+
 public function registerMediaConversions()
 {
     $this->addMediaConversion('thumb')
-        ->setManipulations(['w' => 368, 'h' => 232])
-        ->performOnCollections('images');
+         ->setManipulations(['w' => 368, 'h' => 232])
+         ->performOnCollections('images');
 }
 ```
+
 When associating a jpg-, png-, or pdf-file, to the model the package will, 
 besides storing the original image, create a derived image for every media 
 conversion that was added. By default, the output will be a jpg-file.
@@ -40,45 +39,42 @@ find in their image API. So if you want to output another image format you
 can specify pngor gif using the fm-key in an an imageprofile.
 
 By default, a conversion will be performed on the queue that you specified 
-in the configuration. You can also avoid the usage of the queue by calling `nonQueued()` 
-on a conversion.
+in the configuration. You can also avoid the usage of the queue by calling `nonQueued()` on a conversion.
 
-You can add as many conversions on a model as you want. Conversion can also be performed on
-multiple collections. To do so you can just leave of the performOnCollections-call. If you pass
- "*" to performOnCollections the conversion will be applied to every collection as well.
-
-Here's an example where some of these options are demonstrated.
+You can add as many conversions on a model as you want. Conversion can also be performed on multiple collections. To do so you can just leave of the performOnCollections-call. If you pass "*" to performOnCollections the conversion will be applied to every collection as well.
 
 ```php
 //in your news model
+
 public function registerMediaConversions()
 {
     $this->addMediaConversion('thumb')
-        ->setManipulations(['w' => 368, 'h' => 232,'filt' => 'greyscale', 'fm' => 'png'])
-        ->performOnCollections('images', 'anotherCollection') // the conversion will be performed on multiple collections
-        ->nonQueued(); // this conversion will not be queued
+         ->setManipulations(['w' => 368, 'h' => 232,'filt' => 'greyscale', 'fm' => 'png'])
+         ->performOnCollections('images', 'anotherCollection')
+         ->nonQueued();
+    // => the conversion will be performed on multiple collections and won't be queued
 
-    //a second media conversion    
     $this->addMediaConversion('adminThumb')
-        ->setManipulations(['w' => 50, 'h' => 50, 'sharp'=> 15])
-        ->performOnCollections('*'); // perform the conversion on every collection
+         ->setManipulations(['w' => 50, 'h' => 50, 'sharp'=> 15])
+         ->performOnCollections('*');
+    // => the conversion will be performed on every collection
 
-    //a third media conversion that will be performed on every collection
     $this->addMediaConversion('big')
-        ->setManipulations(['w' => 500, 'h' => 500]);
+         ->setManipulations(['w' => 500, 'h' => 500]);
+    // => this conversion will also be performed on every collection
 }
 ```
 
-Instead of specify the glide parameters in the `setManipulations-method` you can also you 
-use the convenience methods.
+Instead of specify the glide parameters in the `setManipulations-method` you can also you use the convenience methods.
 
-This media conversion
+This media conversion—
 
 ```php
 $this->addMediaConversion('thumb')
      ->setManipulations(['w' => 500]);
 ```
-is equivalent to:
+
+—is equivalent to:
 
 ```php
 $this->addMediaConversion('thumb')

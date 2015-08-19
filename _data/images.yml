@@ -3,6 +3,3 @@ favicon: /favicon.ico
 
 # Path to project specific apple-touch-icon-precomposed.png, leave blank to use default
 apple_touch: /apple-touch-icon-precomposed.png
-
-# Path to project logo
-logo: /logo.png
