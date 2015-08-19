@@ -22,10 +22,7 @@
   }
 
   .next {
-    margin-top: 2*$lh;
-    text-align: right;
-
-    &:before {
+    &:after {
       content: "\00BB";
       @include gotham-narrow-bold;
     }
