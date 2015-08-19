@@ -5,73 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% assign version = page.url | remove_first: "/" | split: "/"" | first %}
+    {% assign version = page.url | remove_first: "/" | split: "/" | first %}
     {% if version == nil %}
-    {% assign version = site.data.project.default_version %}
+        {% assign version = site.data.project.default_version %}
     {% endif %}
 
     {% capture version_home %}/{{ version }}/{% endcapture %}
     {% if page.url == '/' or page.url == version_home %}
-    <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
+        <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
     {% else %}
-    <title>{{ page.title }} - {{ site.data.project.title }}</title>
+        <title>{{ page.title }} - {{ site.data.project.title }}</title>
     {% endif %}
 
     <meta name="description" content="{{ site.data.project.description }}">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6194432/712802/css/fonts.css" />
+    <!-- @todo: Replace with production project -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6194432/608542/css/fonts.css" />
     <link rel="stylesheet" href="/css/site.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 
-<header>
-    <a class="logo" href="{% if version == site.data.project.default_version %}/{% else %}/{{ version }}/{% endif %}">
-        <!--
-        {% if site.data.images.logo %}
-            <span class="icon">
-                <img src="{{ site.data.images.logo }}" alt="{{ site.data.project.title }} - {{ site.data.project.tagline }}">
-            </span>
-        {% endif %}
-        -->
-        <span class="name">{{ site.data.project.title }}</span>
-        <span class="tagline">{{ site.data.project.tagline }}</span>
-    </a>
-    <a href="https://spatie.be/" class="spatie">
-        Spatie bvba antwerp
-    </a>
-</header>
+<div class="container">
+    <header class="header">
+        <section class="brand">
+            <h1 class="logotype"><a href="https://spatie.be">Spatie</a></h1>
+        </section>
+        <!-- <a class="logo" href="{% if version == site.data.project.default_version %}/{% else %}/{{ version }}/{% endif %}"> -->
+            <!--
+            {% if site.data.images.logo %}
+                <span class="icon">
+                    <img src="{{ site.data.images.logo }}" alt="{{ site.data.project.title }} - {{ site.data.project.tagline }}">
+                </span>
+            {% endif %}
+            -->
+            <section class="project">
+                <h2><a href="/">{{ site.data.project.title }}</a></h2>
+                <h3>{{ site.data.project.tagline }}</h3>
+            </section>
+        </a>
+    </header>
 
-<main>
-    <menu>
-        <select class="versions">
-            {% for v in site.data.menu %}
-            <option data-url="{% if v[0] == site.data.project.default_version %}/{% else %}/{{ v[0] }}/{% endif %}" {% if version == v[0] %}selected="selected"{% endif %}>
-                Version: {{ v[0] }}
-            </option>
-            {% endfor %}
-        </select>
-
-        {% for section in site.data.menu[version] %}
-        <h2>{{ section[0] }}</h2>
-        <ul>
-            {% for link in section[1] %}
-            <li {% if page.url == link[1] %}class="selected"{% endif %}>
-                <a href="{{ link[1] }}">{{ link[0] }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+    <!-- <select class="versions">
+        {% for v in site.data.menu %}
+        <option data-url="{% if v[0] == site.data.project.default_version %}/{% else %}/{{ v[0] }}/{% endif %}" {% if version == v[0] %}selected="selected"{% endif %}>
+            Version: {{ v[0] }}
+        </option>
         {% endfor %}
-    </menu>
-    <article>
-        {{ content }}
-    </article>
-</main>
+    </select> -->
+    <div class="content-container">
+        <nav class="sidebar">
+            {% for section in site.data.menu[version] %}
+                <h2>{{ section[0] }}</h2>
+                <ul>
+                    {% for link in section[1] %}
+                    <li {% if page.url == link[1] %}class="selected"{% endif %}>
+                        <a href="{{ link[1] }}">{{ link[0] }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </nav>
+        <main class="main">
+            {{ content }}
+        </main>
+    </div>
 
-<footer>
-    <span>&copy; Copyright <a href="https://spatie.be">Spatie</a>.</span>
-</footer>
+    <footer class="footer">
+        <div class="contents">MMXV • © <a href="https://spatie.be">spatie.be</a>, Antwerpen</div>
+        <div class="visual"></div>
+    </footer>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://theme.thephpleague.com/js/scripts.js"></script>

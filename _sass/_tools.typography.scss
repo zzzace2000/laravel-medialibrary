@@ -1,29 +1,34 @@
 @mixin gotham-narrow-extralight {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
-  font-weight: 200;;
+  font-weight: 200;
 }
 
 @mixin gotham-narrow-light {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
-  font-weight: 200;;
+  font-weight: 300;
 }
 
-@mixin gotham-narrow-light-italic {
+@mixin gotham-narrow {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
-  font-style: italic;
-  font-weight: 300;;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @mixin gotham-narrow-bold {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
-  font-weight: 700;;
+  font-weight: 700;
 }
 
-@mixin gotham-narrow-bold-italic {
+@mixin gotham-narrow-black {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
-  font-style: italic;
-  font-weight: 700;;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@mixin source-code-pro {
+  font-family: "Source Code Pro", "Courier New", monospace;
+  font-weight: 500;
 }

@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @include wrap;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+}
+
+.sidebar {
+  flex: 0 0 340px;
+}
+
+.main {
+  flex: 1 1;
+}
+
+.footer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,23 @@
+.main {
+  padding: 27px 30px 40px;
+
+  h1 {
+    font-size: 1.5em;
+    @include gotham-narrow-bold;
+  }
+
+  h2 {
+    @include gotham-narrow-bold;
+  }
+
+  p,
+  h2,
+  .highlight {
+    margin-top: $lh;
+  }
+
+  a {
+    @include plain-link;
+    border-bottom: 3px solid $blue-light;
+  }
+}

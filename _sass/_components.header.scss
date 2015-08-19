@@ -1,0 +1,40 @@
+.header {
+  color: $white;
+  background-color: $blue;
+  display: flex;
+
+  .brand {
+    padding: 10px 9px;
+    background-color: $blue-dark;
+    flex: 0 0 340px;
+
+    .logotype a {
+      display: block;
+      @include scaled-dimensions(100px, 45px, 1.5);
+      @include svg('spatie');
+      @include hide-text;
+    }
+  }
+
+  .project {
+    padding: 0 30px;
+
+    h2,
+    h3 {
+      margin-top: 31px;
+      display: inline-block;
+      @include has-plain-links;
+    }
+
+    h2 {
+      font-size: 28px;
+      @include gotham-narrow-black;
+    }
+
+    h3 {
+      margin-left: 5px;
+      text-transform: lowercase;
+      color: $blue-light;
+    }
+  }
+}

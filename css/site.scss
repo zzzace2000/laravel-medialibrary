@@ -2,9 +2,11 @@
 ---
 
 // Settings
+@import "settings.colors";
 @import "settings.typography";
 
 // Tools
+@import "tools";
 @import "tools.typography";
 
 // Generic
@@ -12,3 +14,11 @@
 
 // Base
 @import "base.document";
+
+// Components
+@import "components.layout";
+@import "components.header";
+@import "components.main";
+@import "components.sidebar";
+@import "components.footer";
+@import "components.hljs";

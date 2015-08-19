@@ -5,5 +5,17 @@
 body {
   font-size: $fs;
   line-height: $lh;
-  @include gotham-narrow-light;
+  color: $black;
+  background-color: $beige;
+  @include gotham-narrow;
+}
+
+::selection {
+  color: $white;
+  background-color: $blue;
+}
+
+::-moz-selection {
+  color: $white;
+  background-color: $blue;
 }

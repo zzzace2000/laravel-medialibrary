@@ -1,0 +1,34 @@
+.sidebar {
+  line-height: 1.4;
+  padding: 33px 30px 25px;
+  background-color: $blue-light;
+
+  h2,
+  li {
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    color: $blue;
+    @include gotham-narrow-bold;
+  }
+
+  ul {
+    margin-bottom: 1.4*1em;
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      height: 20px;
+    }
+    
+    a:hover,
+    &.selected a {
+      border-bottom: 4px solid rgba(#fff, .8);
+    }
+  }
+  
+}
