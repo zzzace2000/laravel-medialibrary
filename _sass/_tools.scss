@@ -32,7 +32,7 @@
   background-position: center center;
 }
 
-@mixin scaled-dimensions($width, $height, $scale) {
+@mixin dimensions($width, $height, $scale: 1) {
   width: $width * $scale;
   height: $height * $scale;
 }
@@ -45,5 +45,11 @@
 @mixin has-plain-links {
   a {
     @include plain-link;
+  }
+}
+
+@mixin no-flexbox {
+  html.no-flexbox & {
+    @content
   }
 }

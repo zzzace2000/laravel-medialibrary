@@ -10,7 +10,7 @@
   flex-direction: row;
   background-color: $white;
 
-  .no-flexbox & {
+  @include no-flexbox {
     @include clearfix;
   }
 }
@@ -18,7 +18,7 @@
 .sidebar {
   flex: 0 0 340px;
 
-  .no-flexbox & {
+  @include no-flexbox {
     width: 340px;
     float: left;
   }
@@ -27,7 +27,7 @@
 .main {
   flex: 1 1;
 
-  .no-flexbox & {
+  @include no-flexbox {
     float: left;
     width: calc(100% - 340px);
   }
