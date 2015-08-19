@@ -1,0 +1,29 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% assign version = page.url | remove_first: "/" | split: "/" | first %}
+    {% if version == nil %}
+        {% assign version = site.data.project.default_version %}
+    {% endif %}
+
+    {% if page.url == '/' or page.url == version_home %}
+        <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
+    {% else %}
+        <title>{{ page.title }} - {{ site.data.project.title }}</title>
+    {% endif %}
+
+    <meta name="description" content="{{ site.data.project.description }}">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!-- @todo: Replace with production project -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6194432/608542/css/fonts.css" />
+    <link rel="stylesheet" href="/css/site.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>

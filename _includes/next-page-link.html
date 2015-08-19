@@ -1,0 +1,14 @@
+{% assign hasNextPage = 0 %}
+{% for section in site.data.menu[version] %}
+    {% for link in section[1] %}
+        {% if hasNextPage == 1 %}
+            <p class="next">
+                <a href="{{ link[1] }}">Next: {{ link[0] }}</a>
+            </p>
+            {% assign hasNextPage = 0 %}
+        {% endif %}
+        {% if page.url == link[1] %}
+            {% assign hasNextPage = 1 %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}

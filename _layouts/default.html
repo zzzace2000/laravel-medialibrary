@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {% assign version = page.url | remove_first: "/" | split: "/" | first %}
-    {% if version == nil %}
-        {% assign version = site.data.project.default_version %}
-    {% endif %}
-
-    {% if page.url == '/' or page.url == version_home %}
-        <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
-    {% else %}
-        <title>{{ page.title }} - {{ site.data.project.title }}</title>
-    {% endif %}
-
-    <meta name="description" content="{{ site.data.project.description }}">
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <!-- @todo: Replace with production project -->
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6194432/608542/css/fonts.css" />
-    <link rel="stylesheet" href="/css/site.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</head>
+{% include head.html %}
 <body>
 
 <div class="container">
@@ -43,61 +15,14 @@
         </a>
     </header>
 
-    {% comment %}
-    <select class="versions">
-        {% for v in site.data.menu %}
-        <option data-url="{% if v[0] == site.data.project.default_version %}/{% else %}/{{ v[0] }}/{% endif %}" {% if version == v[0] %}selected="selected"{% endif %}>
-            Version: {{ v[0] }}
-        </option>
-        {% endfor %}
-    </select>
-    {% endcomment %}
-
     <div class="content-container">
-        <nav class="navigation-mobile">
-            <select>
-                {% for section in site.data.menu[version] %}
-                    <optgroup>
-                        <option disabled>-- {{ section[0] }}</option>
-                        {% for link in section[1] %}
-                            <option value="{{ link[1] }}" {% if page.url == link[1] %}disabled{% endif %}>
-                                {{ link[0] }}
-                            </option>
-                        {% endfor %}
-                    </optgroup>
-                {% endfor %}
-            </select>
-        </nav>
-        <nav class="navigation">
-            {% for section in site.data.menu[version] %}
-                <h2>{{ section[0] }}</h2>
-                <ul>
-                    {% for link in section[1] %}
-                        <li {% if page.url == link[1] %}class="selected"{% endif %}>
-                            <a href="{{ link[1] }}">{{ link[0] }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endfor %}
-        </nav>
+        {% include navigation.html %}
+
         <main class="main">
             <h1>{{ page.title }}</h1>
             {{ content }}
             
-            {% assign hasNextPage = 0 %}
-            {% for section in site.data.menu[version] %}
-                {% for link in section[1] %}
-                    {% if hasNextPage == 1 %}
-                        <p class="next">
-                            <a href="{{ link[1] }}">Next: {{ link[0] }}</a>
-                        </p>
-                        {% assign hasNextPage = 0 %}
-                    {% endif %}
-                    {% if page.url == link[1] %}
-                        {% assign hasNextPage = 1 %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
+            {% include next-page-link.html %}
         </main>
     </div>
 

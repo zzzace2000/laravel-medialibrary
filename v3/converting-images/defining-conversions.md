@@ -67,14 +67,14 @@ public function registerMediaConversions()
 
 Instead of specify the glide parameters in the `setManipulations-method` you can also you use the convenience methods.
 
-This media conversion—
+This media conversion:
 
 ```php
 $this->addMediaConversion('thumb')
      ->setManipulations(['w' => 500]);
 ```
 
-—is equivalent to:
+is equivalent to:
 
 ```php
 $this->addMediaConversion('thumb')
