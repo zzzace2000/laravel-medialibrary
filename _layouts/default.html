@@ -10,7 +10,6 @@
         {% assign version = site.data.project.default_version %}
     {% endif %}
 
-    {% capture version_home %}/{{ version }}/{% endcapture %}
     {% if page.url == '/' or page.url == version_home %}
         <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
     {% else %}
@@ -74,6 +73,21 @@
         </nav>
         <main class="main">
             {{ content }}
+            
+            {% assign hasNextPage = 0 %}
+            {% for section in site.data.menu[version] %}
+                {% for link in section[1] %}
+                    {% if hasNextPage == 1 %}
+                        <p class="next">
+                            <a href="{{ link[1] }}">Next: {{ link[0] }}</a>
+                        </p>
+                        {% assign hasNextPage = 0 %}
+                    {% endif %}
+                    {% if page.url == link[1] %}
+                        {% assign hasNextPage = 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
         </main>
     </div>
 

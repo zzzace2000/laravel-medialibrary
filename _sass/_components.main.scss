@@ -20,4 +20,14 @@
     @include plain-link;
     border-bottom: 3px solid $blue-light;
   }
+
+  .next {
+    margin-top: 2*$lh;
+    text-align: right;
+
+    &:before {
+      content: "\00BB";
+      @include gotham-narrow-bold;
+    }
+  }
 }
