@@ -17,7 +17,7 @@ get the relative path to the root of your disk.
 
 The code of the included `S3UrlGenerator` should help make things more clear:
 
-{% highlight php %}
+```php
  namespace Spatie\MediaLibrary\UrlGenerator;
  
  use Spatie\MediaLibrary\Exceptions\UrlCouldNotBeDeterminedException;
@@ -36,4 +36,4 @@ The code of the included `S3UrlGenerator` should help make things more clear:
          return config('laravel-medialibrary.s3.domain').'/'.$this->getPathRelativeToRoot();
      }
  }
-{% endhighlight %}
+```

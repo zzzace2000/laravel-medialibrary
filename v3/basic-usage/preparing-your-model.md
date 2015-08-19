@@ -7,7 +7,7 @@ layout: default
 
 To relate media to a model, the model must implement this interface and trait:
 
-{% highlight php %}
+```php
 namespace App\Models;
 
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
@@ -18,4 +18,4 @@ class News extends Model implements HasMedia
     use HasMediaTrait;
    ...
 }
-{% endhighlight %}
+```

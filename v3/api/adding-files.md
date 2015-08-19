@@ -8,7 +8,7 @@ layout: default
 
 ###addMedia
 
-{% highlight php %}
+```php
 /**
  * Add a file to the medialibrary.
  *
@@ -17,12 +17,12 @@ layout: default
  * @return \Spatie\MediaLibrary\FileAdder\FileAdder
  */
 public function addMedia($file)
-{% endhighlight %}
+```
 
 ##Chaining
 
 ###preserveOriginal
-{% highlight php %}
+```php
 /**
  * When adding the file the medialibrary, the original file
  * will be preserved.
@@ -30,5 +30,5 @@ public function addMedia($file)
  * @return $this
  */
 public function preservingOriginal()
-{% endhighlight %}
+```
 

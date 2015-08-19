@@ -15,8 +15,8 @@ some big files that you want to save on s3.
 The `toCollectionOnMedia`- and `toMediaLibraryOnDisk`-functions accept a disk name as a 
 second parameter. If you have a disk named s3 you can do this:
 
-{% highlight php %}
+```php
 $newsItem->addMedia($pathToAFile)->toCollectionOnDisk('images', 's3');
-{% endhighlight %}
+```
 
 This file will be stored on the disk named s3.

@@ -16,6 +16,11 @@
     margin-top: $lh;
   }
 
+  p code {
+    background-color: $blue-lighter;
+    @include source-code-pro;
+  }
+
   a {
     @include plain-link;
     border-bottom: 3px solid $blue-light;
