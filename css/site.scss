@@ -3,12 +3,15 @@
 
 // Settings
 @import "settings.colors";
-@import "settings.typography";
 @import "settings.layout";
+@import "settings.typography";
 
 // Tools
-@import "tools";
 @import "tools.breakpoint";
+@import "tools.flexbox";
+@import "tools.images";
+@import "tools.layout";
+@import "tools.style";
 @import "tools.typography";
 
 // Generic

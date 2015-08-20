@@ -1,0 +1,10 @@
+@function image($filename) {
+  @return url('/assets/images/'+$filename);
+}
+
+@mixin svg($filename) {
+  background-image: image($filename+'.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}

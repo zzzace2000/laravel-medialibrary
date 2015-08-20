@@ -1,16 +1,16 @@
 .container {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   @include wrap;
+  @include display-flex;
+  @include flex-direction(column);
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  @include display-flex;
+  @include flex-direction(column);
 
   @include breakpoint(md) {
-    flex-direction: row;
+    @include flex-direction(row);
   }
 
   @include no-flexbox {
@@ -19,7 +19,7 @@
 
   .brand {
     @include breakpoint(md) {
-      flex: 0 0 $sidebar-width;
+      @include flex(0 0 $sidebar-width);
 
       @include no-flexbox {
         width: $sidebar-width;
@@ -31,19 +31,19 @@
   .project {
     @include no-flexbox {
       float: left;
-      width: calc(100% - $sidebar-width);
+      width: calc(100% - #{$sidebar-width});
     }
   }
 }
 
 .content-container {
-  display: flex;
   background-color: $white;
-  flex-direction: column;
-  flex: 1 1 auto;
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex(1 1 auto);
 
   @include breakpoint(md) {
-    flex-direction: row;
+    @include flex-direction(row);
   }
 
   @include no-flexbox {
@@ -52,7 +52,7 @@
 }
 
 .navigation {
-  flex: 0 0 $sidebar-width;
+  @include flex(0 0 $sidebar-width);
 
   @include no-flexbox {
     width: $sidebar-width;
@@ -61,11 +61,11 @@
 }
 
 .main {
-  flex: 1 1;
+  @include flex(1 1 auto);
 
   @include no-flexbox {
     float: left;
-    width: calc(100% - $sidebar-width);
+    width: calc(100% - #{$sidebar-width});
   }
 }
 

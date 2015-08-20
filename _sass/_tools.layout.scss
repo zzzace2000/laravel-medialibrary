@@ -1,0 +1,21 @@
+@mixin wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }  
+}
+
+@mixin dimensions($width, $height, $scale: 1) {
+  width: $width * $scale;
+  height: $height * $scale;
+}
