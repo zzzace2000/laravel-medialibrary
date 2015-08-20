@@ -3,9 +3,15 @@
   padding: 33px 30px 25px;
   background-color: $blue-light;
 
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
+
   h2,
   li {
-    margin-bottom: 8px;
+    margin-bottom: .5em;
   }
 
   h2 {
@@ -34,5 +40,10 @@
 }
 
 .navigation-mobile {
-  display: none;
+  padding: 15px 30px;
+  background-color: $blue-light;
+
+  @include breakpoint(md) {
+    display: none;
+  }
 }

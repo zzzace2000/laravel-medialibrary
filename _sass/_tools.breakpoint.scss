@@ -1,0 +1,14 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 500px) { @content; } // Currently unused
+  }
+  @elseif $breakpoint == md {
+    @media (min-width: 760px) { @content; }
+  }
+  @elseif $breakpoint == lg {
+    @media (min-width: 1200px) { @content; } // Currently unused
+  }
+  @else {
+    @media (min-width: $breakpoint) { @content; }
+  }
+}

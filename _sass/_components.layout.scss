@@ -5,10 +5,45 @@
   @include wrap;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
+
+  @include no-flexbox {
+    @include clearfix;
+  }
+
+  .brand {
+    @include breakpoint(md) {
+      flex: 0 0 $sidebar-width;
+
+      @include no-flexbox {
+        width: $sidebar-width;
+        float: left;
+      }
+    }
+  }
+
+  .project {
+    @include no-flexbox {
+      float: left;
+      width: calc(100% - $sidebar-width);
+    }
+  }
+}
+
 .content-container {
   display: flex;
-  flex-direction: row;
   background-color: $white;
+  flex-direction: column;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
 
   @include no-flexbox {
     @include clearfix;
@@ -16,10 +51,10 @@
 }
 
 .navigation {
-  flex: 0 0 340px;
+  flex: 0 0 $sidebar-width;
 
   @include no-flexbox {
-    width: 340px;
+    width: $sidebar-width;
     float: left;
   }
 }
@@ -29,7 +64,7 @@
 
   @include no-flexbox {
     float: left;
-    width: calc(100% - 340px);
+    width: calc(100% - $sidebar-width);
   }
 }
 

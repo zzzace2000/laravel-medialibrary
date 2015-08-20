@@ -2,12 +2,23 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: .9*$fs;
+
+  @include breakpoint(900px) {
+    font-size: $fs;
+  }
+}
+
 body {
-  font-size: $fs;
-  line-height: $lh;
   color: $black;
   background-color: $beige;
+  line-height: .9*$lh;
   @include gotham-narrow;
+
+  @include breakpoint(900px) {
+    line-height: $lh;
+  }
 }
 
 ::selection {

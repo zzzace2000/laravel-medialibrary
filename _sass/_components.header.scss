@@ -1,54 +1,59 @@
 .header {
   color: $white;
-  background-color: $blue;
-  display: flex;
-
-  @include no-flexbox {
-    @include clearfix;
-  }
+  background: $blue;
 
   .brand {
     padding: 15px 30px;
-    background-color: $blue-dark;
-    flex: 0 0 340px;
 
-    @include no-flexbox {
-      width: 340px;
-      float: left;
+    @include breakpoint(md) {
+      background: $blue-dark;
     }
 
     .logotype a {
       display: block;
-      @include dimensions(100px, 45px, 1);
-      @include svg('spatie');
       @include hide-text;
+      @include dimensions(100px, 45px, 1);
+
+      @include svg('spatie');
+      background-size: 80%;
+
+      padding: 10px;
+      border-radius: 3px;
+      background-color: $blue-dark;
+
+      @include breakpoint(md) {
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+      }
     }
   }
 
   .project {
-    padding: 0 30px;
+    padding: 10px 30px 20px;
 
-    @include no-flexbox {
-      float: left;
-      width: calc(100% - 340px);
+    @include breakpoint(md) {
+      padding-top: 25px;
     }
 
     h2,
     h3 {
-      margin-top: 25px;
       display: inline-block;
       @include has-plain-links;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 1.8em;
       @include gotham-narrow-bold;
     }
 
     h3 {
-      margin-left: 5px;
       text-transform: lowercase;
       color: $blue-light;
+
+      @include breakpoint(md) {
+        margin-left: 5px;
+      }
     }
   }
 }
