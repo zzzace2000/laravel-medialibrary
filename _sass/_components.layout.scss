@@ -1,20 +1,15 @@
 .container {
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
   flex-direction: column;
   min-height: 100vh;
   @include wrap;
 }
 
 .header {
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
   flex-direction: column;
 
   @include breakpoint(md) {
-    -webkit-box-orient: horizontal;
     flex-direction: row;
   }
 
@@ -42,15 +37,12 @@
 }
 
 .content-container {
-  display: -webkit-flex;
   display: flex;
   background-color: $white;
-  -webkit-box-orient: vertical;
   flex-direction: column;
   flex: 1 1 auto;
 
   @include breakpoint(md) {
-    -webkit-box-orient: horizontal;
     flex-direction: row;
   }
 
