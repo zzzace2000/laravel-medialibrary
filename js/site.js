@@ -1,15 +1,15 @@
 (function() {
   $(document).ready(function() {
-    console.log('site');
-    Medialibrary.Menu.init();
+    Navigation.init();
+    hljs.initHighlightingOnLoad();
   });
 
-  Medialibrary = {};
-
-  Medialibrary.Menu = {
+  Navigation = {
     init: function() {
-      Medialibrary.Menu.setCurrentPage();
-      Medialibrary.Menu.bindEvents();
+      var _ = Navigation;
+
+      _.setCurrentPage();
+      _.bindEvents();
     },
 
     setCurrentPage: function() {
@@ -17,11 +17,9 @@
     },
 
     bindEvents: function() {
-      console.log('events');
       $('#js-navigation-mobile').on('change', function() {
         window.location.href = $(this).val();
       });
     }
-
   }
 }());
