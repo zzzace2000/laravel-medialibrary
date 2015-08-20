@@ -1,14 +1,12 @@
 <nav class="navigation-mobile">
-    <select>
+    <select id="js-navigation-mobile">
         {% for section in site.data.menu[version] %}
-            <optgroup>
-                <option disabled>-- {{ section[0] }}</option>
-                {% for link in section[1] %}
-                    <option value="{{ link[1] }}" {% if page.url == link[1] %}disabled{% endif %}>
-                        {{ link[0] }}
-                    </option>
-                {% endfor %}
-            </optgroup>
+            <option disabled>-- {{ section[0] }}</option>
+            {% for link in section[1] %}
+                <option value="{{ link[1] }}">
+                    {{ link[0] }}
+                </option>
+            {% endfor %}
         {% endfor %}
     </select>
 </nav>
