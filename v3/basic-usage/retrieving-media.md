@@ -20,8 +20,8 @@ $publicUrl = $mediaItems[0]->getUrl();
 A media-object also has a name. By default it is the name of the file.
 
 ```php
-echo $mediaItems[0]->name // display the name
-$mediaItems[0]->name = 'new name'
+echo $mediaItems[0]->name; // display the name
+$mediaItems[0]->name = 'new name';
 $mediaItems[0]->save(); // the new name gets saved. Activerecord ftw!
 ```
 
@@ -34,7 +34,7 @@ $newsItem->addMedia($pathToFile)->usingName('new name')->toMediaLibrary();
 Using the media-object the name of uploaded file can be changed.
 
 ```php
-$mediaItems[0]->file_name = 'newFileName.jpg'
+$mediaItems[0]->file_name = 'newFileName.jpg';
 $mediaItems[0]->save(); // Saving will also rename the file on the filesystem.
 ```
 
@@ -47,8 +47,8 @@ $newsItem->addMedia($pathToFile)->usingFileName('otherFileName.txt')->toMediaLib
 You can also get the size of the file:
 
 ```php
-$mediaItems[0]->size // returns the size in bytes
-$mediaItems[0]->humanReadableSize // returns the size in a human readable form (eg. 1,5 MB)
+$mediaItems[0]->size; // returns the size in bytes
+$mediaItems[0]->humanReadableSize; // returns the size in a human readable form (eg. 1,5 MB)
 ```
 
 You can remove something from the library simply calling `delete` on the media-object:
