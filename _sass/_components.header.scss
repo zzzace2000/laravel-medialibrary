@@ -12,7 +12,7 @@
     .logotype a {
       display: block;
       @include hide-text;
-      @include dimensions(100px, 45px, 1);
+      @include dimensions(100px, 45px);
 
       @include svg('spatie');
       background-size: 80%;
@@ -30,6 +30,7 @@
   }
 
   .project {
+    width: 100%;
     padding: 10px 30px 20px;
 
     @include breakpoint(md) {
@@ -54,6 +55,17 @@
       @include breakpoint(md) {
         margin-left: 5px;
       }
+    }
+
+    .github {
+      position: absolute;
+      right: 30px;
+      top: 23px;
+      display: block;
+      opacity: .8;
+      @include dimensions(32px, 32px);
+      @include svg('github');
+      @include hide-text;
     }
   }
 }
