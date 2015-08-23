@@ -11,10 +11,11 @@ $mediaItems = $newsItem->getMedia();
 
 The method returns an collection with `Media`-objects.
 
-You can retrieve the URL to the file associated with `Media`-object with:
+You can retrieve the URL and path to the file associated with `Media`-object with:
 
 ```php
 $publicUrl = $mediaItems[0]->getUrl();
+$fullPathOnDisk = $mediaItems[0]->getPath();
 ```
 
 A media-object also has a name. By default it is the name of the file.
