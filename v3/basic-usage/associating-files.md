@@ -1,6 +1,5 @@
 ---
 title: Associating files
-layout: default
 ---
 
 You can add associate a file with a model like this:

@@ -1,6 +1,5 @@
 ---
 title: Generating custom URLs
-layout: default
 ---
 
 When `getUrl()` is called the task of generating that URL is passed to an implementation of `Spatie\MediaLibraryUrlGenerator`.

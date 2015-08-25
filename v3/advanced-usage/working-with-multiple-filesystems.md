@@ -1,6 +1,5 @@
 ---
 title: Working with multiple filesystems
-layout: default
 ---
 
 By default all files are stored on the disk whose name is specified in `defaultFilesystem` in the config file. 

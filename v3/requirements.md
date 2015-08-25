@@ -1,12 +1,19 @@
 ---
 title: Requirements
-layout: default
 ---
 
-To create derived images [GD](http://php.net/manual/en/book.image.php) needs to be installed on your server. For the creation of pdf thumbnails [Imagick](http://php.net/manual/en/imagick.setresolution.php) is also required.
+To create derived images [GD](http://php.net/manual/en/book.image.php) needs to be installed on your server. If you want to create PDF thumbnails [Imagick](http://php.net/manual/en/imagick.setresolution.php) is also required.
 
-On Ubuntu you can install Imagick by issuing this command:
+Imagick can be installed using `apt-get` on Ubuntu:
 
 ```bash
-$ sudo apt-get install imagemagick php5-imagick
+$ apt-get install imagemagick php5-imagick
 ```
+
+Or with `yum` on CentOS:
+
+```bash
+$ yum install ImageMagick ImageMagick-devel
+```
+
+Note: Root access to your server might be required.

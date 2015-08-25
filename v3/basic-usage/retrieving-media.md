@@ -1,6 +1,5 @@
 ---
 title: Retrieving media
-layout: default
 ---
 
 To retrieve files you can use the ```getMedia```-method:

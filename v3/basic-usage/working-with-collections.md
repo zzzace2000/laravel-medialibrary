@@ -1,6 +1,5 @@
 ---
 title: Working with collections
-layout: default
 ---
 
 If you have different types of files that you want to associate,

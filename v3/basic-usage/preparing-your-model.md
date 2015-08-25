@@ -1,6 +1,5 @@
 ---
 title: Preparing your model
-layout: default
 ---
 
 To relate media to a model, the model must implement this interface and trait:

@@ -1,15 +1,14 @@
 ---
 title: Installation & setup
-layout: default
 ---
 
-You can install this package via composer:
+Medialibrary can be installed via composer:
 
 ```bash
 $ composer require spatie/laravel-medialibrary
 ```
 
-Next, you must install the service provider:
+Next, you need to the service provider:
 
 ```php
 // config/app.php
@@ -19,19 +18,14 @@ Next, you must install the service provider:
 ];
 ```
 
-You can publish the migration with:
+And publish and run the migration:
 
 ```bash
 $ php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
-```
-
-After the migration has been published you can create the media-table by running your migrations:
-
-```bash
 $ php artisan migrate
 ```
 
-You can publish the config file with:
+Publishing the config file is optional:
 
 ```bash
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"
@@ -68,7 +62,7 @@ return [
 ];
 ```
 
-Finally you should add a disk to `app/config/filesystems.php`. All files added the medialibrary will be stored on that disk, this would be a typical configuration:
+Finally you should add a disk to `app/config/filesystems.php`. All files added the media library will be stored on that disk, this would be a typical configuration:
 
 ```php
 return [

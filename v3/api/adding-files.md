@@ -1,6 +1,5 @@
 ---
 title: Adding files
-layout: default
 ---
 
 ## Start methods

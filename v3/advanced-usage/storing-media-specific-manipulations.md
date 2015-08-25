@@ -1,6 +1,5 @@
 ---
 title: Storing media specific manipulations
-layout: default
 ---
 
 A media object has a property `manipulations`. You can set it to an array of 

@@ -3,7 +3,6 @@ v3:
         Introduction: '/'
         Requirements: '/v3/requirements/'
         Installation & setup: '/v3/installation-and-setup/'
-        Simple example: '/v3/simple-example/'
     Basic usage:
         Preparing your model: '/v3/basic-usage/preparing-your-model/'
         Associating files: '/v3/basic-usage/associating-files/'

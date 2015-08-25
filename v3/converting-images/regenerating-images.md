@@ -1,6 +1,5 @@
 ---
 title: Regenerating images
-layout: default
 ---
 
 When you change a conversion on your model, all images that were previously generated will not

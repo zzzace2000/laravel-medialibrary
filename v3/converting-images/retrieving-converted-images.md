@@ -1,6 +1,5 @@
 ---
 title: Retrieving converted images
-layout: default
 ---
 
 Here's an example that shows you how to get an URL and a path to the converted image:

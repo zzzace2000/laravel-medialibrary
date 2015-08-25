@@ -1,10 +1,9 @@
 ---
 title: Introduction
 permalink: /
-layout: default
 ---
 
-Medialibrary is a Laravel 5.1 package that can associate all sorts of files with Eloquent models. It provides a simple, fluent API to work with. Here's an example:
+Medialibrary is a Laravel 5.1 package that can associate all sorts of files with Eloquent models. It provides a simple, fluent API to work with. Here's a quick example:
 
 ```php
 $newsItem = News::find(1);

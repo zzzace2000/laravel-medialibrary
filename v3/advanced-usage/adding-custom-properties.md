@@ -1,6 +1,5 @@
 ---
 title: Using custom properties
-layout: default
 ---
 
 When adding a file to the medialibrary you can pass an array with custom properties:
