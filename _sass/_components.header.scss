@@ -1,31 +1,37 @@
 .header {
+  $brand-space: 150px;
+
   color: $white;
   background: $blue;
   position: relative;
   @include clearfix;
 
   .project {
-    width: calc(100% - 160px);
-    float: left;
-    padding: 10px 30px 20px;
+    padding: 22px 15px 20px;
     position: relative;
 
-    @include breakpoint(md) {
-      padding-top: 25px;
+    @include breakpoint(sm) {
+      padding: 25px 30px 20px 30px;
+      padding-right: 30px;
+      float: left;
+      width: calc(100% - #{$brand-space});
     }
 
-    h2,
-    h3 {
-      display: inline-block;
-      @include has-plain-links;
-    }
-
+    h1,
     h2 {
+      @include has-plain-links;
+
+      @include breakpoint(md) {
+        display: inline-block;
+      }
+    }
+
+    h1 {
       font-size: 1.8em;
       @include gotham-narrow-bold;
     }
 
-    h3 {
+    h2 {
       text-transform: lowercase;
       color: $blue-light;
 
@@ -36,19 +42,37 @@
 
     .github {
       position: absolute;
-      right: 0;
-      top: 21px;
+      right: 15px;
+      top: 30px;
       opacity: .8;
       @include dimensions(32px, 32px);
       @include svg('github');
       @include hide-text;
+
+      @include breakpoint(sm) {
+        right: 0;
+      }
+
+      @include breakpoint(md) {
+        top: 22px;
+      }
     }
   }
 
   .brand {
-    width: 160px;
+    display: none;
+    width: $brand-space;
     float: right;
     padding: 15px 30px 15px 20px;
+    margin-top: 8px;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+
+    @include breakpoint(md) {
+      margin: 0;
+    }
 
     .logotype a {
       display: block;

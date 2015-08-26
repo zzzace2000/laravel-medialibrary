@@ -1,10 +1,28 @@
 .main {
-  padding: 27px 30px 40px;
+  padding: 27px 11px 40px;
+
+  @include breakpoint(sm) {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 
   h1 {
+    display: none;
     font-size: 1.5em;
-    padding: 0 .25em;
+    padding: 0 4px;
     @include gotham-narrow-bold;
+
+    & + p, & + h2 {
+      margin-top: 0;
+    }
+
+    @include breakpoint(md) {
+      display: block;
+
+      & + p, & + h2 {
+        margin-top: 0;
+      }
+    }
   }
 
   h2 {
@@ -13,7 +31,7 @@
 
   p,
   h2 {
-    padding: 0 .25em;
+    padding: 0 4px;
     margin-top: $lh;
   }
 
@@ -23,6 +41,7 @@
 
   p code {
     background-color: $blue-lighter;
+    font-size: .9em;
     @include hack;
   }
 

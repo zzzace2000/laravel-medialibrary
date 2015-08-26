@@ -36,12 +36,25 @@
       border-bottom: 4px solid rgba(#fff, .8);
     }
   }
+
+  .version {
+    color: $blue-grayish;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: 1em;
+  }
   
 }
 
 .navigation-mobile {
-  padding: 15px 30px;
+  padding: 15px;
   background-color: $blue-light;
+
+  @include breakpoint(sm) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   @include breakpoint(md) {
     display: none;
