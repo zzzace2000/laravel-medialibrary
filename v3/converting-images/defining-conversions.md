@@ -64,7 +64,8 @@ public function registerMediaConversions()
 }
 ```
 
-Instead of specify the glide parameters in the `setManipulations-method` you can also you use the convenience methods.
+
+Instead of specifying the glide parameters in the `setManipulations` method, you can also you use the built in convenience methods.
 
 This media conversion:
 
