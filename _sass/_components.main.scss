@@ -20,7 +20,7 @@
       display: block;
 
       & + p, & + h2 {
-        margin-top: 0;
+        margin-top: $lh;
       }
     }
   }
@@ -29,8 +29,7 @@
     @include gotham-narrow-bold;
   }
 
-  p,
-  h2 {
+  p, h2, ul, ol {
     padding: 0 4px;
     margin-top: $lh;
   }
@@ -48,6 +47,19 @@
   a {
     @include plain-link;
     border-bottom: 3px solid $blue-light;
+  }
+
+  ul li {
+    padding-left: .75em;
+    position: relative;
+
+    &:before {
+      content: "\2043";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      opacity: .33;
+    }
   }
 
   .next {

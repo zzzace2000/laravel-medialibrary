@@ -1,8 +1,11 @@
 v3:
-    Getting started:
+    index:
         Introduction: '/'
         Requirements: '/v3/requirements/'
         Installation & setup: '/v3/installation-and-setup/'
+        Contributing: '/v3/contributing/'
+        Questions & issues: '/v3/questions-and-issues/'
+        Changelog: '/v3/changelog/'
     Basic usage:
         Preparing your model: '/v3/basic-usage/preparing-your-model/'
         Associating files: '/v3/basic-usage/associating-files/'
