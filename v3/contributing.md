@@ -21,4 +21,4 @@ $ phpunit
 ```
 
 
-**Happy coding**!
+*Happy coding!*

@@ -3,21 +3,22 @@
 }
 
 html {
-  font-size: .9*$fs;
-
-  @include breakpoint(900px) {
-    font-size: $fs;
-  }
+  font-size: $lh; 
 }
 
 body {
   color: $black;
   background-color: $beige;
-  line-height: .9*$lh;
+  font-size: .9*$fs;
+  line-height: .9rem;
+
+  @include breakpoint(900px) {
+    font-size: $fs;
+  }
   @include gotham-narrow;
 
   @include breakpoint(900px) {
-    line-height: $lh;
+    line-height: 1rem;
   }
 }
 
