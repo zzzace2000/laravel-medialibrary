@@ -5,30 +5,28 @@
 
 <div class="container">
     <header class="header">
-        <section class="brand">
-            <h1 class="logotype"><a href="https://spatie.be">Spatie</a></h1>
-        </section>
         <section class="project">
             <h2><a href="/">{{ site.data.project.title }}</a></h2>
             <h3>{{ site.data.project.tagline }}</h3>
             <a class="github" href="https://github.com/spatie/laravel-medialibrary" target="_blank">Github</a>
         </section>
+        <section class="brand">
+            <h1 class="logotype"><a href="https://spatie.be" target="_blank">Spatie</a></h1>
+        </section>
     </header>
 
     <div class="content-container">
         {% include navigation.html %}
-
         <main class="main">
             <h1>{{ page.title }}</h1>
             {{ content }}
-            
             {% include next-page-link.html %}
         </main>
     </div>
 
     <footer class="footer">
         <div class="contents">
-            {{ site.time | date: '%Y' }} • © <a href="https://spatie.be">spatie.be, Antwerpen</a>
+            {{ site.time | date: '%Y' }} • © <a href="https://spatie.be" target="_blank">spatie.be</a>
             • <a href="https://github.com/spatie/laravel-medialibrary">Medialibrary on Github</a>
         </div>
         <div class="visual"></div>

@@ -1,3 +1,6 @@
+$fs: 15px;
+$lh: $fs*1.8;
+
 @mixin gotham-narrow-extralight {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
@@ -28,6 +31,6 @@
   font-weight: 800;
 }
 
-@mixin source-code-pro {
-  font-family: "Source Code Pro", "Courier New", monospace;
+@mixin hack {
+  font-family: "Hack", "Menlo", "Lucida Console", "Lucida Sans Typewriter", monospace;
 }

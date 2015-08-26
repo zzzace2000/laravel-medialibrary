@@ -3,6 +3,7 @@
 
   h1 {
     font-size: 1.5em;
+    padding: 0 .25em;
     @include gotham-narrow-bold;
   }
 
@@ -12,6 +13,7 @@
 
   p,
   h2 {
+    padding: 0 .25em;
     margin-top: $lh;
   }
 
@@ -21,7 +23,7 @@
 
   p code {
     background-color: $blue-lighter;
-    @include source-code-pro;
+    @include hack;
   }
 
   a {

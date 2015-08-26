@@ -5,36 +5,36 @@
   @include flex-direction(column);
 }
 
-.header {
-  @include display-flex;
-  @include flex-direction(column);
+// .header {
+//   @include display-flex;
+//   @include flex-direction(column);
 
-  @include breakpoint(md) {
-    @include flex-direction(row);
-  }
+//   @include breakpoint(md) {
+//     @include flex-direction(row);
+//   }
 
-  @include no-flexbox {
-    @include clearfix;
-  }
+//   @include no-flexbox {
+//     @include clearfix;
+//   }
 
-  .brand {
-    @include breakpoint(md) {
-      @include flex(0 0 $sidebar-width);
+//   .project {
+//     @include no-flexbox {
+//       float: left;
+//       width: calc(100% - #{$sidebar-width});
+//     }
+//   }
 
-      @include no-flexbox {
-        width: $sidebar-width;
-        float: left;
-      }
-    }
-  }
+//   .brand {
+//     @include breakpoint(md) {
+//       @include flex(0 0 $sidebar-width);
 
-  .project {
-    @include no-flexbox {
-      float: left;
-      width: calc(100% - #{$sidebar-width});
-    }
-  }
-}
+//       @include no-flexbox {
+//         width: $sidebar-width;
+//         float: left;
+//       }
+//     }
+//   }
+// }
 
 .content-container {
   background-color: $white;

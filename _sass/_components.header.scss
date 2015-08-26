@@ -2,38 +2,13 @@
   color: $white;
   background: $blue;
   position: relative;
-
-  .brand {
-    padding: 15px 30px;
-
-    @include breakpoint(md) {
-      background: $blue-dark;
-    }
-
-    .logotype a {
-      display: block;
-      @include hide-text;
-      @include dimensions(100px, 45px);
-
-      @include svg('spatie');
-      background-size: 80%;
-
-      padding: 10px;
-      border-radius: 3px;
-      background-color: $blue-dark;
-
-      @include breakpoint(md) {
-        padding: 0;
-        border-radius: 0;
-        background-color: transparent;
-        background-position: left center;
-      }
-    }
-  }
+  @include clearfix;
 
   .project {
-    width: 100%;
+    width: calc(100% - 160px);
+    float: left;
     padding: 10px 30px 20px;
+    position: relative;
 
     @include breakpoint(md) {
       padding-top: 25px;
@@ -61,12 +36,27 @@
 
     .github {
       position: absolute;
-      right: 30px;
-      top: 23px;
-      display: block;
+      right: 0;
+      top: 21px;
       opacity: .8;
       @include dimensions(32px, 32px);
       @include svg('github');
+      @include hide-text;
+    }
+  }
+
+  .brand {
+    width: 160px;
+    float: right;
+    padding: 15px 30px 15px 20px;
+
+    .logotype a {
+      display: block;
+      padding: 10px;
+      border-radius: 3px;
+      background-color: $blue-dark;
+      @include svg('spatie');
+      @include dimensions(100px, 45px);
       @include hide-text;
     }
   }
