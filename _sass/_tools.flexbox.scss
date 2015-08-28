@@ -1,23 +1,21 @@
 @mixin display-flex {
-  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
 }
 
 @mixin flex-direction($direction) {
-  -ms-flex-direction: $direction;
   -webkit-flex-direction: $direction;
   flex-direction: $direction;
 }
 
 @mixin flex($values) {
-  -ms-flex: $values;
   -webkit-flex: $values;
   flex: $values;
 }
 
 @mixin no-flexbox {
-  html.no-flexbox & {
+  html.no-flexbox &,
+  html.ie & {
     @content
   }
 }

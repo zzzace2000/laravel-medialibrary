@@ -29,7 +29,7 @@
       display: inline-block;
       height: 20px;
     }
-    
+
     a:hover,
     &.selected a {
       border-bottom: 4px solid rgba(#fff, .8);
@@ -39,6 +39,7 @@
   .version {
     color: $blue-grayish;
     text-transform: uppercase;
+    letter-spacing: .025em;
     font-weight: bold;
     font-size: .9em;
     margin-bottom: 1em;

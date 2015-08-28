@@ -11,6 +11,7 @@
     font-size: 1.5em;
     padding: 0 4px;
     margin-bottom: 1rem;
+    letter-spacing: .01em;
     @include gotham-narrow-bold;
 
     @include breakpoint(md) {
@@ -21,6 +22,7 @@
   h2 {
     text-transform: uppercase;
     color: $gray;
+    letter-spacing: .025em;
     @include gotham-narrow-bold;
   }
 
