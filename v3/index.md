@@ -29,7 +29,16 @@ $newsItem->addMedia($smallFile)->toCollectionOnDisk('downloads', 'local');
 $newsItem->addMedia($bigFile)->toCollectionOnDisk('downloads', 's3');
 ```
 
-The storage of the files is handled by [Laravel's Filesystem](http://laravel.com/docs/5.1/filesystem), so you can plug in any compatible filesystem. Additionally the package can manipulate images and pdfs that have been added in the medialibrary.
+The storage of the files is handled by [Laravel's Filesystem](http://laravel.com/docs/5.1/filesystem), 
+so you can plug in any compatible filesystem. 
 
-Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+The package can also generate derived images such as thumbnails for images and pdf's. Once you've [set up
+your model to do this](http://medialibrary.spatie.be/v3/converting-images/defining-conversions/), 
+thumbnails can easily be accessed:
+```php
+$newsItem->getCollection('images')->first()->getUrl('thumb');
+```
+
+Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
+our open source projects [on our website](https://spatie.be/opensource).
 
