@@ -3,7 +3,6 @@ v3:
         Introduction: '/'
         Requirements: '/v3/requirements/'
         Installation & setup: '/v3/installation-and-setup/'
-        Contributing: '/v3/contributing/'
         Questions & issues: '/v3/questions-and-issues/'
         Changelog: '/v3/changelog/'
     Basic usage:
