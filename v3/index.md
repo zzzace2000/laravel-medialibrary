@@ -35,6 +35,7 @@ so you can plug in any compatible filesystem.
 The package can also generate derived images such as thumbnails for images and pdf's. Once you've [set up
 your model to do this](http://medialibrary.spatie.be/v3/converting-images/defining-conversions/), 
 thumbnails can easily be accessed:
+
 ```php
 $newsItem->getCollection('images')->first()->getUrl('thumb');
 ```
