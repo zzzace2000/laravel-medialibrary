@@ -2,7 +2,20 @@
 title: Adding files
 ---
 
-## Start methods
+Adding a file to the medialibrary is easy. Just pick one of the starting methods, optionally add some of the middle methods
+and finish with a finishing method. All start and middle methods are chainable.
+
+For example:
+
+```php
+$youModel
+    ->addMedia($pathToFile) //starting method
+    ->withCustomProperties(['mime-type' => 'image/jpeg']) //middle method
+    ->preservingOriginal() //middle method
+    ->toMediaLibrary(); //finishing method
+```
+
+## Starting methods
 
 ### addMedia
 
@@ -17,7 +30,7 @@ title: Adding files
 public function addMedia($file)
 ```
 
-## Chaining
+## Middle
 
 ### preserveOriginal
 
@@ -30,3 +43,5 @@ public function addMedia($file)
  */
 public function preservingOriginal()
 ```
+
+##Finishing methods

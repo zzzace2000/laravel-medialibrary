@@ -21,4 +21,5 @@ v3:
         Storing media specific manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
     API:
         Adding files: '/v3/api/adding-files/'
+        Defining collections: '/v3/api/defining-collections/'
 
