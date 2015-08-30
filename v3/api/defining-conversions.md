@@ -106,7 +106,7 @@ public function setWidth($width)
  */
  ```
  
- ### setFormat
+### setFormat
  
 ```php
 /**
@@ -122,7 +122,7 @@ public function setWidth($width)
  public function setFormat($format)
  ``` 
  
- ### setFit
+### setFit
  
 ```php 
 /**
@@ -138,7 +138,7 @@ public function setWidth($width)
  public function setFit($fit)
  ```
  
- ### setRectangle
+### setRectangle
  
 ```php 
 /**
