@@ -10,5 +10,5 @@ When we feel we have solved a problem in a way that can help other developers,
 we release our code as open source software [on GitHub](https://spatie.be/opensource).
 
 This medialibrary package was made and is maintained by [Sebastian De Deyne](https://twitter.com/sebdedeyne) 
-and [Freek Van der Herten](https://twitter.com/freekmurze). There are [many other contributors
-as well](https://github.com/spatie/laravel-medialibrary/graphs/contributors).
+and [Freek Van der Herten](https://twitter.com/freekmurze). There are 
+[many other contributors](https://github.com/spatie/laravel-medialibrary/graphs/contributors) as well.
