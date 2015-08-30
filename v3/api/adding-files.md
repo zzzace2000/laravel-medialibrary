@@ -8,7 +8,7 @@ and finish with a finishing method. All start and middle methods are chainable.
 For example:
 
 ```php
-$youModel
+$yourModel
     ->addMedia($pathToFile) //starting method
     ->withCustomProperties(['mime-type' => 'image/jpeg']) //middle method
     ->preservingOriginal() //middle method
@@ -43,9 +43,7 @@ public function addMedia($file)
 public function copyMedia($file)
 ```
 
-
-
-## Middle
+## Middle methods
 
 ### preserveOriginal
 
