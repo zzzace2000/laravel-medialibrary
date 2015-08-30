@@ -21,7 +21,8 @@ $youModel
 
 ```php
 /**
- * Add a file to the medialibrary.
+ * Add a file to the medialibrary. The file will be removed from
+ * it's original location.
  *
  * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $file
  *
@@ -29,6 +30,20 @@ $youModel
  */
 public function addMedia($file)
 ```
+
+### copyMedia
+```php
+/**
+ * Copy a file to the medialibrary.
+ *
+ * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $file
+ *
+ * @return \Spatie\MediaLibrary\FileAdder\FileAdder
+ */
+public function copyMedia($file)
+```
+
+
 
 ## Middle
 
@@ -44,4 +59,82 @@ public function addMedia($file)
 public function preservingOriginal()
 ```
 
+### usingName
+
+```php
+/**
+ * Set the name of the media object.
+ *
+ * @param $name
+ *
+ * @return $this
+ */
+public function usingName($name)
+```
+
+### setName
+
+This is an alias for `usingName`
+
+### usingFileName
+
+```php
+/**
+ * Set the name of the file that is stored on disk.
+ *
+ * @param $fileName
+ *
+ * @return $this
+ */
+public function usingFileName($fileName)
+```
+
+### setFileName
+
+This is an alias for `usingFileName`
+
+### withCustomProperties
+
+```php
+/**
+ * Set the metadata.
+ *
+ * @param array $customProperties
+ *
+ * @return $this
+ */
+public function withCustomProperties(array $customProperties)
+```
+
 ##Finishing methods
+
+### toMediaLibrary
+
+```php
+/**
+ * Set the target media collection to default.
+ * Will also start the import process.
+ *
+ * @param string $collectionName
+ * @param string $diskName
+ *
+ * @return Media
+ *
+ * @throws FileDoesNotExist
+ * @throws FileTooBig
+ */
+public function toMediaLibrary($collectionName = 'default', $diskName = ''
+```
+
+### toMediaLibraryOnDisk
+
+This is an alias for `toMediaLibrary`
+
+### toCollection
+
+This is an alias for `toMediaLibrary`
+
+### toCollectionOnDisk
+
+This is an alias for `toMediaLibrary`
+
