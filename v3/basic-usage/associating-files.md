@@ -6,13 +6,16 @@ You can add associate a file with a model like this:
 
 ```php
 $newsItem = News::find(1);
-$newsItem->addMedia($pathToFile)->toMediaLibrary();
+$newsItem->addMedia($pathToFile)
+         ->toMediaLibrary();
 ```
 
-The file will now be associated with the newsItem. Adding a file will move your file to a configured disk.
+The file will now be associated with the news item. Adding a file will move your file to your configured disk.
 
-If you want to preserve the file at the original location, you can call preservingOriginal:
+If you want to preserve the original file, you can call `preservingOriginal`:
 
 ```php
-$newsItem->addMedia($pathToFile)->preservingOriginal()->toMediaLibrary();
+$newsItem->addMedia($pathToFile)
+         ->preservingOriginal()
+         ->toMediaLibrary();
 ```

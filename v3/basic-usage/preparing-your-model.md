@@ -2,7 +2,7 @@
 title: Preparing your model
 ---
 
-To relate media to a model, the model must implement this interface and trait:
+To associate media with a model, the model must implement the following interface and trait:
 
 ```php
 namespace App\Models;

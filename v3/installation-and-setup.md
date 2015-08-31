@@ -8,7 +8,7 @@ Medialibrary can be installed via composer:
 $ composer require spatie/laravel-medialibrary
 ```
 
-Next, you need to the service provider:
+Next, you need to register the service provider:
 
 ```php
 // config/app.php
