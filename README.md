@@ -1,3 +1,3 @@
-This repo contains the manual for the [laravel-medialibrary-package](https://github.com/spatie/laravel-medialibrary).
+This repo contains the documentation on the [laravel-medialibrary-package](https://github.com/spatie/laravel-medialibrary).
 
-You can view the contents of the manual on [http://medialibrary.spatie.be](http://medialibrary.spatie.be)
+You can view the contents of the documentation on [http://medialibrary.spatie.be](http://medialibrary.spatie.be)
