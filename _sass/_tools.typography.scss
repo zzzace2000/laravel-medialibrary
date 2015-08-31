@@ -1,15 +1,3 @@
-@mixin gotham-narrow-extralight {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
-  font-style: normal;
-  font-weight: 200;
-}
-
-@mixin gotham-narrow-light {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
-  font-style: normal;
-  font-weight: 300;
-}
-
 @mixin gotham-narrow {
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
@@ -20,12 +8,6 @@
   font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
   font-style: normal;
   font-weight: 700;
-}
-
-@mixin gotham-narrow-black {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
-  font-style: normal;
-  font-weight: 800;
 }
 
 @mixin hack {
