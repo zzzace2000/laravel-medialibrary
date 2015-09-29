@@ -14,9 +14,9 @@ $mediaItem = $newsItem
 Version 3.3.0 and higher provide some convenience methods to work with custom properties:
 
 ```php
-$mediaItem->hasCustomProperty('mime-type'); // return true
+$mediaItem->hasCustomProperty('mime-type'); // returns true
 $mediaItem->getCustomProperty('mime-type'); // returns 'image/jpeg'
 
-$mediaItem->hasCustomProperty('does not exists'); // return false
+$mediaItem->hasCustomProperty('does not exists'); // returns false
 $mediaItem->getCustomProperty('does not exists'); // returns null
 ```
