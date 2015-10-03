@@ -24,6 +24,6 @@ In the config file of the package you must specify the name of your custom class
 ```php
 // config/laravel-medialibrary.php
 ...
-   'media_model' =>  YourApp\Models\Media::class
+   'media_model' => YourApp\Models\Media::class
 ...
 ```
