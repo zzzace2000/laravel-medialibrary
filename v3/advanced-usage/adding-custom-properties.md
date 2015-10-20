@@ -20,3 +20,9 @@ $mediaItem->getCustomProperty('mime-type'); // returns 'image/jpeg'
 $mediaItem->hasCustomProperty('does not exists'); // returns false
 $mediaItem->getCustomProperty('does not exists'); // returns null
 ```
+
+<span class="version">3.5+</span> You can also specify a default value when retrieving a custom property.
+
+```php
+$mediaItem->getCustomProperty('isPublic', false);
+```
