@@ -89,8 +89,10 @@
   
   .version {
     font-size: .75em;
+    color: $gray-dark;
     display: inline-block;
-    background-color: $blue-light;
+    border: 2px solid $blue-light;
+    background-color: $blue-lighter;
     padding: 0 .3em;
     border-radius: 2px;
     line-height: 1.5;
