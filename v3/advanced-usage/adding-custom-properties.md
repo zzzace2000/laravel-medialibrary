@@ -11,7 +11,7 @@ $mediaItem = $newsItem
     ->toMediaLibrary();
 ```
 
-Version 3.3.0 and higher provide some convenience methods to work with custom properties:
+<span class="version">3.3+</span> There are some convenience methods to work with custom properties:
 
 ```php
 $mediaItem->hasCustomProperty('mime-type'); // returns true
