@@ -19,3 +19,12 @@ $newsItem->addMedia($pathToFile)
          ->preservingOriginal()
          ->toMediaLibrary();
 ```
+
+<span class="version">v3.8+</span> You can also add a remote file to the media library:
+
+```php
+$url = 'http://medialibrary.spatie.be/assets/images/mountain.jpg';
+$newsItem->addMediaFromUrl($url)
+         ->toMediaLibrary();
+```
+

@@ -31,7 +31,25 @@ $yourModel
 public function addMedia($file)
 ```
 
+### <span class="version">v3.8+</span> addMediaFromUrl
+
+```php
+/**
+ * Add a remote file to the medialibrary.
+ * 
+ * @param $url
+ *
+ * @return mixed
+ *
+ * @throws \Spatie\MediaLibrary\Exceptions\UrlCouldNotBeOpened
+ */
+public function addMediaFromUrl($url)
+```
+
+
 ### copyMedia
+
+
 ```php
 /**
  * Copy a file to the medialibrary.
