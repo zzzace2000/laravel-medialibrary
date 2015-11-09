@@ -1,5 +1,5 @@
 ---
-title: <span class="version">v3.9+</span>Using a custom directory structure
+title: <span class="version">v3.9+</span>&nbsp;Using a custom directory structure
 ---
 
 By default the media library will store files inside a directory that uses
