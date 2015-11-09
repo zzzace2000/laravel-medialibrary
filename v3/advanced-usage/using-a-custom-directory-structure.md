@@ -1,5 +1,5 @@
 ---
-title: Using custom paths
+title: Using a custom directory structure
 ---
 
 <span class="version">v3.9+</span> By default the media library will store files inside a directory that uses

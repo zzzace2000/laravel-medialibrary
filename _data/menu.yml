@@ -20,7 +20,7 @@ v3:
         Generating custom URLs: '/v3/advanced-usage/generating-custom-urls/'
         Storing media specific manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
         Using your own model: '/v3/advanced-usage/using-your-own-model/'
-        Using custom paths: '/v3/advanced-usage/using-custom-paths/'
+        Using a custom directory structure: '/v3/advanced-usage/using-a-custom-directory-structure/'
     API:
         Adding files: '/v3/api/adding-files/'
         Defining conversions: '/v3/api/defining-conversions/'
