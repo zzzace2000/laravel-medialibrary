@@ -57,8 +57,7 @@ interface PathGenerator
 ```
 
 [This example from the tests](https://github.com/spatie/laravel-medialibrary/blob/3.9.0/tests/PathGenerator/CustomPathGenerator.php) uses
-the md5 value of media id to created directories. The directories were conversions are stored will be named `c` instead of the default `conversions`.
+the md5 value of media-id to name directories. The directories were conversions are stored will be named `c` instead of the default `conversions`.
 
-There aren't any restrictions on how the directories can be named but take care that every media should have it's own directory.
-When a `Media`-object get deleted the package will delete its entire associated directory.
-It is your job to make sure you create unique directories when using a `PathGenerator`.
+There aren't any restrictions on how the directories can be named. When a `Media`-object get deleted the package will delete its entire associated directory.
+So take care that every media gets it's own unique directory.
