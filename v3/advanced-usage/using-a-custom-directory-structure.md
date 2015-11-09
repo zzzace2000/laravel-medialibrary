@@ -25,7 +25,7 @@ media
 
 Putting files inside their own folders guaranties that files with the same name can be added to the medialibrary.
 
-To override the used folder structure, a class that conforms to the `PathGenerator`-interface can be specified as the `custom_path_generator_class` in the config file.
+To override the default folder structure, a class that conforms to the `PathGenerator`-interface can be specified as the `custom_path_generator_class` in the config file.
 
 Let's take a look at the interface:
 
