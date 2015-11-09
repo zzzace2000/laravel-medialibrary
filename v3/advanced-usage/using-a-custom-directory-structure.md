@@ -6,20 +6,22 @@ title: Using a custom directory structure
 the `id` of it's `Media`-object as a name. Converted images will be stored inside a directory
 names conversions.
 
-> media
-> --- 1
-> ------ file.jpg
-> ------ conversions
-> --------- small.jpg
-> --------- medium.jpg
-> --------- big.jpg
-> --- 2
-> ------ file.jpg
-> ------ conversions
-> --------- small.jpg
-> --------- medium.jpg
-> --------- big.jpg
-> ...
+```
+media
+--- 1
+------ file.jpg
+------ conversions
+--------- small.jpg
+--------- medium.jpg
+--------- big.jpg
+--- 2
+------ file.jpg
+------ conversions
+--------- small.jpg
+--------- medium.jpg
+--------- big.jpg
+...
+```
 
 Putting files inside their own folders guaranties that files with the same name can be added to the medialibrary.
 
