@@ -34,6 +34,8 @@ php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServicePr
 The config file contains a number of default values:
 
 ```php
+<?php
+
 return [
 
     /*
@@ -63,7 +65,12 @@ return [
      * When urls to files get generated this class will be called. Leave empty
      * if your files are stored locally above the site root or on s3.
      */
-    'custom_url_generator_class' => '',
+    'custom_url_generator_class' => null,
+
+    /*
+     * The class that contains the strategy for determining a media file's path.
+     */
+    'custom_path_generator_class' => null,
 
     's3' => [
         /*
@@ -91,4 +98,7 @@ return [
 The package will add a .gitignore file to the directory where the media will be stored.
 Using another versioning sytem than git? Don't forget to ignore the directory of your media disk.
 
-If you are planning on working with image manipulations it's recommended to configure a queue on your service and specify it in the config file.
+If you are planning on working with image manipulations it's recommended to configure a 
+queue on your service and specify it in the config file.
+
+Want to use S3? Then follow [Laravel's instructions on how to add the S3 Flysystem driver](http://laravel.com/docs/5.1/filesystem#configuration).
