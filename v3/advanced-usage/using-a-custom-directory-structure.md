@@ -56,7 +56,7 @@ interface PathGenerator
 }
 ```
 
-[This example from the test](https://github.com/spatie/laravel-medialibrary/blob/3.9.0/tests/PathGenerator/CustomPathGenerator.php) uses
+[This example from the tests](https://github.com/spatie/laravel-medialibrary/blob/3.9.0/tests/PathGenerator/CustomPathGenerator.php) uses
 the md5 value of media id to created directories. The directories were conversions are stored will be named `c` instead of the default `conversions`.
 
 There aren't any restrictions on how the directories can be named but take care that every media should have it's own directory.
