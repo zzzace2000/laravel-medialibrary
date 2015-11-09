@@ -2,7 +2,7 @@
 title: <span class="version">v3.9+</span>&nbsp;Using a custom directory structure
 ---
 
-By default the media library will store files inside a directory that uses
+By default files will be stored inside a directory that uses
 the `id` of it's `Media`-object as a name. Converted images will be stored inside a directory
 names conversions.
 
@@ -23,7 +23,7 @@ media
 ...
 ```
 
-Putting files inside their own folders guaranties that files with the same name can be added to the medialibrary.
+Putting files inside their own folders guaranties that files with the same name can be added without any problems.
 
 To override the default folder structure, a class that conforms to the `PathGenerator`-interface can be specified as the `custom_path_generator_class` in the config file.
 
