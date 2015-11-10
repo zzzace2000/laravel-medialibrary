@@ -3,6 +3,73 @@ title: Changelog
 machine_name: changelog
 ---
 
+##3.10.0
+- Added `CollectionClearedEvent`, `ConverionCompleteEvent`, `MediaAddedEvent`
+
+##3.9.2
+- Fixed an issue where a model would not regenerate manipulations after changing manipulations on media
+
+##3.9.1
+- Fix bug when using a custom UrlGenerator class
+
+##3.9.0
+- Added PathGenerator
+
+**This version contains a bug when using a custom UrglGenerator, please upgrade to 3.9.1**
+
+##3.8.0
+- Added ability to add media from a url
+
+$media = $this->testModel->addMediaFromUrl($url)
+
+##3.7.3
+- `clearMediaCollection` is now chainable
+
+##3.7.2
+- Add mimetype when putting a file on a disk.
+
+##3.7.1
+- Fix generation of local url's on non-unix hosts
+
+##3.7.0
+- Added `setCustomProperty`-method on Media
+
+##3.6.0
+- Added `withProperties` and `withAttributes` methods
+
+##3.5.1
+- Bugfix: `HasMediaTrait::updateMedia` now also updates custom properties. It also updates the order column starting at 1 instead of 0 (behaves the same as the sortable trait)
+
+##3.5.0
+- Added the ability to provide a default value fallback to the `getCustomProperty` method
+
+##3.4.0
+- Added support for using a custom model
+
+##3.3.1
+- Fixed a bug where conversions would always be performed on the default queue
+
+##3.3.0
+- Added `hasCustomProperty`- and `getCustomProperty`-convenience-methods
+
+##3.2.5
+- Allow 0 for `x` and `y` parameters in `setRectangle`
+
+##3.2.4
+- Removed dependency on spatie/eloquent-sortable
+
+##3.2.3
+- Add index to morphable fields in migration which could improve performance.
+- Remove unnecessary query when adding a file
+
+##3.2.2
+- Fixes tests
+
+##3.2.1
+- Add index to morphable fields in migration which could improve performance.
+NOTE: if you started out using this version, the tests will be broken. You should make sure 
+model_id and model_type are nullable in your database.
+
 ## 3.2.0
 - Added functions to get a path to a file in the media library
 
