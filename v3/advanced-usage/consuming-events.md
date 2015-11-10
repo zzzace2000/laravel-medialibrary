@@ -34,6 +34,7 @@ of added media.
 ```php
 namespace App\Listeners;
 
+use Log;
 use Spatie\MediaLibrary\Events\MediaAddedEvent;
 
 class MediaLogger
@@ -45,7 +46,7 @@ class MediaLogger
     {
         $media = $event->getMedia();
         $path = $media->getPath();
-        \Log::info("file {$path} has been saved for media {$media->id};
+        Log::info("file {$path} has been saved for media {$media->id}");
     }
 }
 ```
