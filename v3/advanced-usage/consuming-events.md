@@ -11,7 +11,7 @@ The event has a property `media` that holds the `\Spatie\MediaLibrary\Media`-obj
 has been stored.  
 
 ### ConversionCompleteEvent
-This event is fired when a conversion has been completed
+This event is fired when a conversion has been completed.
 
 The event has two public properties:
 
