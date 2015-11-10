@@ -21,6 +21,7 @@ v3:
         Storing media specific manipulations: '/v3/advanced-usage/storing-media-specific-manipulations/'
         Using your own model: '/v3/advanced-usage/using-your-own-model/'
         Using a custom directory structure: '/v3/advanced-usage/using-a-custom-directory-structure/'
+        Consuming events: '/v3/advanced-usage/consuming-events/'
     API:
         Adding files: '/v3/api/adding-files/'
         Defining conversions: '/v3/api/defining-conversions/'
