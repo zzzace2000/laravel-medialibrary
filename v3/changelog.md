@@ -2,6 +2,8 @@
 title: Changelog
 machine_name: changelog
 ---
+##3.10.1
+- Fixed the event names to make them more readable `CollectionHasBeenCleared`, `ConversionHasBeenCompleted`, `MediaHasBeenAdded`
 
 ##3.10.0
 - Added `CollectionClearedEvent`, `ConverionCompleteEvent`, `MediaAddedEvent`

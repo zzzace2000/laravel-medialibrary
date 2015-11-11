@@ -1,16 +1,16 @@
 ---
-title: <span class="version">v3.10+</span>&nbsp;Consuming events
+title: <span class="version">v3.10.1+</span>&nbsp;Consuming events
 ---
 
 The medialibrary will fire the following events that your handlers can listen for:
 
-### MediaAddedEvent
+### MediaHasBeenAdded
 This event is fired after the a file has been saved to disk.
 
 The event has a property `media` that holds the `\Spatie\MediaLibrary\Media`-object of which the file 
 has been stored.  
 
-### ConversionCompleteEvent
+### ConversionHasBeenCompleted
 This event is fired when a conversion has been completed.
 
 The event has two public properties:
@@ -18,7 +18,7 @@ The event has two public properties:
 - `media`: the `\Spatie\MediaLibrary\Media`-object of which a conversion has been completed
 - `conversion`: the conversion (an instance of `\Spatie\MediaLibrary\Conversion\Conversion`) that has just been completed
 
-###CollectionClearedEvent
+###CollectionHasBeenCleared
 This event will be fired after a collection has been cleared.
 
 The event has two public properties:
