@@ -46,7 +46,10 @@
     margin-top: 0;
   }
 
-  p code {
+  p code,
+  ul code,
+  ol code,
+  dl code {
     background-color: $blue-lighter;
     font-size: .9em;
     @include hack;
