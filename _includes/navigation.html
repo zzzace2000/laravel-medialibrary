@@ -1,5 +1,7 @@
 <nav class="navigation-mobile">
+
     <select id="js-navigation-mobile">
+
         {% for section in site.data.menu[version] %}
             {% if section[0] != 'index' %}
                 <option disabled>-- {{ section[0] }}</option>
@@ -13,6 +15,9 @@
     </select>
 </nav>
 <nav class="navigation">
+
+    <input id="algolia-search" placeholder="search" class="navigation_search">
+
     <aside class="version">Version 3.x</aside>
     {% for section in site.data.menu[version] %}
         {% if section[0] != 'index' %}

@@ -1,11 +1,11 @@
 @mixin gotham-narrow {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 @mixin gotham-narrow-bold {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
